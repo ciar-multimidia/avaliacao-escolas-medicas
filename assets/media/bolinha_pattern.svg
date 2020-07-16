@@ -1,1 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15"><circle cx="7.5" cy="7.5" r="7.5" fill="#FCD2B1"/></svg>
+<!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15"><circle cx="7.5" cy="7.5" r="7.5" fill="#FCD2B1"/></svg> -->
+<svg fill-rule="evenodd" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg" stroke-miterlimit="2" clip-rule="evenodd" viewBox="0 0 63 63">
+  <path fill="none" d="M0 0h62.5v62.5H0z"/>
+  <circle cx="31.25" cy="31.25" r="18.75" fill="#fcd2b1"/>
+</svg>

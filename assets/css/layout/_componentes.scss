@@ -1,0 +1,39 @@
+/****************************************
+ * MARCA *
+ ****************************************/
+h1.marca {
+	color: $azul; text-transform: lowercase;
+	font-weight: normal; line-height: 1;
+	background-image: url('../media/bolinha_pattern.svg');
+	background-position: center bottom;
+	background-repeat: space no-repeat;
+	background-size: 24px; padding-bottom: 30px;
+
+	.n01 { font-style: italic; display: block; font-size: 1.12em; padding: 0 5px; }
+	.n02 { font-size: .8em; padding: 0 5px; }
+}
+
+
+
+/****************************************
+ * BOTAO *
+ ****************************************/
+button.botao-grande {
+	@include appearance(none);
+	border: 0; background: $laranja;
+	@extend %bordaredonda-maior;
+	@extend %letterspacing;
+	font-weight: 500;
+	text-transform: lowercase;
+	color: $amarelo-claro;
+	line-height: 1;
+	font-size: 1.6em;
+	padding: .4em 1em;
+	cursor: pointer;
+	@include transition(background 0.2s ease-in-out, padding 0.2s ease-in-out);
+
+	&:hover, &:focus {
+		background: $verde;
+		padding: .4em 1.2em;
+	}
+}

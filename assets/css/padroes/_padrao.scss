@@ -1,0 +1,31 @@
+/////// VARIACOES DE CORES
+$azul:          #54909A;
+$azul-claro:    #95C1C6;
+$verde-clarim:  #E6EDD9;
+$verde-claro:   #BBE186;
+$verde:         #91B774;
+$verde-musgo:   #748268;
+$laranja-claro: #FCD2B1;
+$laranja:       #EA9671;
+$amarelo-claro: #FFFBF3;
+$cinza-texto:   #757575;
+
+
+/////// FAMILIAS UTILIZADAS
+$fonte: 'Mazzard M',Verdana,Geneva,sans-serif;
+
+
+/////// MEDIA QUERIES e TAMANHOS
+$container: 1180px;
+$tablet: 990px;
+$smart-maior: 680px;
+$smart-menor: 500px;
+$celular: 380px;
+$sidebar: 300px;
+
+
+/////// IMPORTACOES
+@import "../bourbon/bourbon";
+@import "../padroes/normalize";
+@import "../padroes/fontface";
+@import "../padroes/mixins";
