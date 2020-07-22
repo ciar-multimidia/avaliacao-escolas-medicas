@@ -1,0 +1,50 @@
+.apresentacao {
+
+	h2 { color: $azul; font-size: 2.5em; margin-bottom: 0}
+
+	.principal {
+		padding-bottom: 3em;
+		@include flex(space-between);
+		@include align-items(center);
+
+		& > div { width: 49%; }
+	}
+
+	.necessidade {
+		padding-top: 3em;
+		padding-bottom: 3em;
+		position: relative;
+		background: white;
+		@include expandefundo(white);
+		column-count: 2;
+		column-gap: 2%;
+		orphans: 2;
+
+		h2 { column-span: all; }
+	}
+
+	.criterios {
+		padding-top: 3em;
+		text-align: center;
+
+		h2 { text-transform: uppercase; margin-bottom: 3rem}
+
+		.inclusao, .exclusao {
+			padding: 1em;
+			position: relative;
+
+			h3 { margin-bottom: 0; }
+		}
+
+		.inclusao {
+			background: $verde-clarim;
+			h3 { color: $verde; font-size: 1.8em; }
+		}
+
+		.exclusao {
+			background: #FFEEE9;
+			h3 { color: $vermelho; font-size: 1.8em; }
+		}
+	}
+
+}
