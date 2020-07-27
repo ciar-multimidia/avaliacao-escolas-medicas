@@ -24,7 +24,7 @@ a.botao, button.botao {
 	border: 0; background: $laranja;
 	@extend %bordaredonda-maior;
 	@extend %letterspacing;
-	font-weight: 500;
+	font-weight: bold;
 	text-transform: lowercase;
 	color: $amarelo-claro;
 	line-height: 1;
