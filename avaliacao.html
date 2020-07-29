@@ -1,13 +1,167 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Avaliação de tendências de mudanças em escolas médicas</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="">
-	</head>
-	<body>
+<html lang="pt-BR">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Avaliação de Tendências de Mudanças em Escolas da Área da Saúde</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<main class="container area-form">
+
+	<header id="cabecalho">
+		<h1 class="marca">
+			<span class="n01">Avaliação de Tendências</span> 
+			<span class="n02">de mudanças em <strong>escolas da área da saúde</strong></span>
+		</h1>
+		<a href="apresentacao.html" class="voltar botao" aria-label="voltar ao início"><span aria-hidden="true">← apresentação</span></a>
+	</header>
+
+
+	<form id="formulario" action="">
 		
-	</body>
+
+
+
+
+
+		<!-- INICIO FORM - PARTE 1 -->
+		<section class="escondido">
+			<h2>Inscrição da instituição</h2>
+			
+			<div class="grupo col-2">
+				<label>
+					<p>Nome da instituição</p>
+					<input id="nome-instituicao" type="text">
+				</label>
+
+				<label>
+					<p>Cidade</p>
+					<input id="cidade" type="text">
+				</label>
+
+				<label>
+					<p>Estado</p>
+					<input id="estado" type="text">
+				</label>
+
+				<label>
+					<p>Ano de formatura primeira turma</p>
+					<input id="primeira-turma" type="text">
+				</label>
+			</div>
+
+			<nav>
+				<a href="#">« voltar</a>
+				<a href="#">avançar »</a>
+			</nav>
+		</section>
+
+
+
+
+
+
+		<!-- INICIO FORM - PARTE 2 -->
+		<section class="escondido">
+			<h2>Inscrição dos Participantes</h2>
+			<p>Para a realização da autoavaliação o método preconiza que haja no <strong>mínimo 10 participantes</strong>, que devem ser atores sociais - discentes e docentes – vinculados a instituição no momento da realização da autoavaliação.</p>
+
+			<h3>Docente participantes</h3>
+			<div class="grupo participantes col-3">
+				<label>
+					<p>Nome</p>
+					<input id="docente-nome" type="text">
+				</label>
+				<label>
+					<p>Departamento em que atua</p>
+					<input id="docente-departamento" type="text">
+				</label>
+				<label>
+					<p>Tempo de contratação</p>
+					<input id="docente-contratacao" type="text">
+				</label>
+				<p style="text-align:right;width:100%"><button>+ adicionar participante</button></p>
+			</div>
+
+			<h3>Discente participantes</h3>
+			<div class="grupo participantes col-2">
+				<label>
+					<p>Nome</p>
+					<input id="discente-nome" type="text">
+				</label>
+				<label>
+					<p>Período em que se encontra no curso</p>
+					<input id="discente-periodo" type="text">
+				</label>
+				<p style="text-align:right;width:100%"><button>+ adicionar participante</button></p>
+			</div>
+
+			<h3>Técnicos-administrativos participantes</h3>
+			<div class="grupo participantes col-3">
+				<label>
+					<p>Nome</p>
+					<input id="ta-nome" type="text">
+				</label>
+				<label>
+					<p>Departamento em que atua</p>
+					<input id="ta-departamento" type="text">
+				</label>
+				<label>
+					<p>Tempo de contratação</p>
+					<input id="ta-contratacao" type="text">
+				</label>
+				<p style="text-align:right;width:100%"><button>+ adicionar participante</button></p>
+			</div>
+
+			<nav>
+				<a href="#">« voltar</a>
+				<div id="status-participantes">Faltam 7 participantes</div>
+				<a href="#">avançar »</a>
+			</nav>
+		</section>
+
+
+
+
+
+
+		<!-- EIXO 1 -->
+		<section>
+			<h1>Eixo 1: Mundo do Trabalho</h1>
+			<p>Este eixo busca identificar a tendência da escola médica para mostrar e discutir, de forma crítica, aspectos do mundo do trabalho onde o médico deverá inserir-se para prestar serviços de saúde, procurando, de forma comprometida, acompanhar e discutir criticamente a dinâmica do mercado de trabalho em saúde e a organização dos serviços, visando ao atendimento qualificado da saúde da população e à orientação dos futuros médicos. </p>
+
+			<h2 class="vetor">VETOR 1 - Carência de profissionais e emprego</h2>
+			
+			<fieldset class="grupo" id="eixo1-vetor1">
+				<label>
+					<input value="opcao1" name="eixo1-vetor1" type="radio">
+					<p>Para a construção do projeto pedagógico, não considera a carência de profissionais para a atenção básica de saúde nem a possibilidade de emprego/trabalho</p>
+				</label>
+				<label>
+					<input value="opcao2" name="eixo1-vetor1" type="radio">
+					<p>Para a construção do projeto pedagógico, considera as possibilidades de emprego/trabalho</p>
+				</label>
+				<label>
+					<input value="opcao3" name="eixo1-vetor1" type="radio">
+					<p>Para a construção do projeto pedagógico, considera a carência de profissionais para a atenção básica de saúde</p>
+				</label>
+			</fieldset>
+
+			<nav>
+				<a href="#">« voltar</a>
+				<a href="#">avançar »</a>
+			</nav>
+		</section>
+
+
+
+
+	</form>
+
+	<progress value="2" max="100">
+
+</main>		
+</body>
 </html>

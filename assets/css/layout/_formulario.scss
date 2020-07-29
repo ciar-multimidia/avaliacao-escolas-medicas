@@ -1,0 +1,168 @@
+// body pagia de form
+.area-form {
+	@include display(flex);
+	@include flex-direction(column);
+	@include justify-content(space-between);
+	@include align-items(center);
+	min-height: 100vh;
+}
+
+// barra de progresso
+progress {
+	@include appearance(none);
+	margin: 0; padding: 0;
+	width: 100vw; height: 12px;
+	background: $laranja-claro;
+	left: 50%; position: absolute;
+	bottom: 0;
+	@include transform(translateX(-50%));
+
+	&::-webkit-progress-bar { background-color: transparent; }
+	&::-webkit-progress-value { background-color: $laranja; }
+	&::-moz-progress-bar { background-color: $laranja; }	
+}
+
+// formulario
+#formulario {
+	width: 100vw;
+	max-width: 800px;
+	margin: 0 auto;
+	@include flex-grow(1);
+	@include display(flex);
+	@include flex-direction(column);
+	@include justify-content(center);
+	@include align-items(center);	
+
+	h1 { color: $verde; font-size: 2.4em; width: 100%; line-height: 1; margin-bottom: 10px;}
+	h2 { color: $azul; font-size: 2em; width: 100%; margin-bottom: 10px;}
+	h3,h2.vetor { color: $azul; font-size: 1em; width: 100%; text-transform: uppercase; margin-bottom: 10px; }
+
+	section {
+		width: 100%;
+		padding-bottom: 4em;
+	}
+
+	input[type="text"], textarea {
+		background: white;
+		border: 0; 
+		outline: 2px solid $laranja-claro;
+		width: 100%; padding: 10px 15px;
+		color: $cinza-texto;
+
+		&:focus {
+			outline-color: $laranja;
+		}
+	}
+
+	// custom radio button
+	input[type="radio"]:checked,
+	input[type="radio"]:not(:checked),
+	input[type="checkbox"]:checked,
+	input[type="checkbox"]:not(:checked) {
+	    position: absolute;
+	    left: -9999px;
+	}
+	input[type="radio"]:checked + p,
+	input[type="radio"]:not(:checked) + p,
+	input[type="checkbox"]:checked + p,
+	input[type="checkbox"]:not(:checked) + p {
+	    position: relative;
+	    padding-left: 28px;
+	    font-style: normal;
+	    cursor: pointer;
+	    // line-height: 20px;
+	    display: inline-block;
+	}
+	input[type="radio"]:checked + p:before,
+	input[type="radio"]:not(:checked) + p:before, 
+	input[type="checkbox"]:checked + p:before,
+	input[type="checkbox"]:not(:checked) + p:before {
+	    content: '';
+	    position: absolute;
+	    left: 0;
+	    top: 0;
+	    width: 18px;
+	    height: 18px;
+	    border: 1px solid $laranja-claro;
+	    background: white;
+	}
+	input[type="radio"]:checked + p:after,
+	input[type="radio"]:not(:checked) + p:after,
+	input[type="checkbox"]:checked + p:after,
+	input[type="checkbox"]:not(:checked) + p:after  {
+	    content: '';
+	    width: 12px;
+	    height: 12px;
+	    background: $laranja;
+	    position: absolute;
+	    top: 4px;
+	    left: 4px;
+	    -webkit-transition: all 0.2s ease;
+	    transition: all 0.2s ease;
+	}
+	input[type="radio"]:not(:checked) + p:after,
+	input[type="checkbox"]:not(:checked) + p:after {
+	    opacity: 0;
+	    -webkit-transform: scale(0);
+	    transform: scale(0);
+	}
+	input[type="radio"]:checked + p:after,
+	input[type="checkbox"]:checked + p:after {
+	    opacity: 1;
+	    -webkit-transform: scale(1);
+	    transform: scale(1);
+	}
+	input[type="radio"]:checked + p,
+	input[type="checkbox"]:checked + p {
+		font-weight: 500;
+	}
+
+	.grupo {
+		width: 100%; padding: 0; margin: 0;
+		@include appearance(none);
+		border: 0; outline: 0;
+		@include flex(space-between);
+
+		label { margin: 0 0 2em; }
+		p { margin-bottom: 0; font-style: italic; line-height: 1.4; }
+
+		&.col-2 > label { width: 48%; }
+		&.col-3 > label { width: 31%; }
+
+		&.participantes {
+			margin-bottom: 2em;
+
+			label { margin-bottom: 0; }
+			button {
+				color: $verde;
+				text-align: right;
+				@include appearance(none);
+				background: none;
+				border: 0; font-weight: 500;
+				cursor: pointer;
+				margin-top: 10px;
+				display: block;
+
+				&:hover, &:focus {text-decoration: underline;}
+			}
+		}
+	}
+
+	fieldset.grupo {
+		label { margin-bottom: 10px; }
+	}
+
+	nav {
+		font-size: 1.1em; font-weight: 500;
+		@include flex(space-between);
+		color: $laranja; width: 100%;
+
+		a {
+			color: inherit; text-decoration: none;
+
+			&:focus, &:hover { font-weight: bold; }
+		}
+
+		#status-participantes { text-align: center; font-style: italic; color: $vermelho;}
+	}
+}

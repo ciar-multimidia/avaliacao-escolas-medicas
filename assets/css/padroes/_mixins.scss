@@ -1,7 +1,6 @@
 @mixin flex($dir) {
     @include display(flex);
     @include flex-wrap(wrap);
-    @include flex-direction(row);
     @include justify-content($dir);
 }
 

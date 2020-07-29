@@ -38,6 +38,7 @@ a.botao, button.botao {
 	&:hover, &:focus {
 		background: $verde;
 		padding: .4em 1.2em;
+		outline: none;
 	}
 
 	&.grande { font-size: 1.6em; }
@@ -83,7 +84,7 @@ a.botao, button.botao {
 /****************************************
  * FORMATACAO DE TEXTO *
  ****************************************/
-a { color: darken($verde,8%); }
+a { color: darken($verde,8%); outline: none;}
 
 hr {
 	width: 100%;
