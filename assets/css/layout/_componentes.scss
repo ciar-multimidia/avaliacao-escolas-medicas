@@ -104,7 +104,8 @@ p { margin-top: 0;  }
 button.nota {
 	@include appearance(none);
 	padding: 0; border: none;
-	width: 24px; height: 24px; line-height: 24px;
+    width: 20px; height: 20px;
+    font-size: 14px; line-height: 20px;
 	background: $laranja; color: $amarelo-claro;
 	text-align: center; display: inline-block;
 	vertical-align: middle; border: 0;
