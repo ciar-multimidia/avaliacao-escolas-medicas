@@ -19,7 +19,7 @@
 	</header>
 
 
-	<form id="formulario" action="">
+	<form id="formulario" class="visivel">
 		
 
 
@@ -27,34 +27,33 @@
 
 
 		<!-- INICIO FORM - PARTE 1 -->
-		<section>
+		<section id="inscricao-instituicao" class="visivel">
 			<h2>Inscrição da instituição</h2>
 			
 			<div class="grupo col-2">
 				<label>
 					<p>Nome da instituição</p>
-					<input id="nome-instituicao" type="text">
+					<input data-nome="nome-instituicao" type="text">
 				</label>
 
 				<label>
 					<p>Cidade</p>
-					<input id="cidade" type="text">
+					<input data-nome="cidade" type="text">
 				</label>
 
 				<label>
 					<p>Estado</p>
-					<input id="estado" type="text">
+					<input data-nome="estado" type="text">
 				</label>
 
 				<label>
-					<p>Ano de formatura primeira turma</p>
-					<input id="primeira-turma" type="text">
+					<p>Ano de formatura da primeira turma</p>
+					<input data-nome="primeira-turma" type="text">
 				</label>
 			</div>
 
 			<nav>
-				<a href="#">« voltar</a>
-				<a href="#">avançar »</a>
+				<button class="bt-avancar" disabled>avançar »</button>
 			</nav>
 		</section>
 
@@ -63,62 +62,72 @@
 
 
 
+
 		<!-- INICIO FORM - PARTE 2 -->
-		<section>
+		<section id="inscricao-participantes">
 			<h2>Inscrição dos Participantes</h2>
 			<p>Para a realização da autoavaliação o método preconiza que haja no <strong>mínimo 10 participantes</strong>, que devem ser atores sociais - discentes e docentes – vinculados a instituição no momento da realização da autoavaliação.</p>
 
 			<h3>Docente participantes</h3>
-			<div class="grupo participantes col-3">
-				<label>
-					<p>Nome</p>
-					<input id="docente-nome" type="text">
-				</label>
-				<label>
-					<p>Departamento em que atua</p>
-					<input id="docente-departamento" type="text">
-				</label>
-				<label>
-					<p>Tempo de contratação</p>
-					<input id="docente-contratacao" type="text">
-				</label>
-				<p style="text-align:right;width:100%"><button>+ adicionar participante</button></p>
-			</div>
+			<ul class="participantes" data-nome="lista-docentes">
+				<li class="grupo" data-nome="docente">
+					<label>
+						<p>Nome</p>
+						<input data-nome="docente-nome" type="text">
+					</label>
+					<label>
+						<p>Departamento em que atua</p>
+						<input data-nome="docente-departamento" type="text">
+					</label>
+					<label>
+						<p>Tempo de contratação</p>
+						<input data-nome="docente-contratacao" type="text">
+					</label>
+					<button class="removerParticipante">-</button>
+				</li>
+			</ul>
+			<button class="btAddParticipante" data-for="lista-docentes">+ adicionar participante</button>
 
 			<h3>Discente participantes</h3>
-			<div class="grupo participantes col-2">
-				<label>
-					<p>Nome</p>
-					<input id="discente-nome" type="text">
-				</label>
-				<label>
-					<p>Período em que se encontra no curso</p>
-					<input id="discente-periodo" type="text">
-				</label>
-				<p style="text-align:right;width:100%"><button>+ adicionar participante</button></p>
-			</div>
+			<ul class="participantes" data-nome="lista-discentes">
+				<li class="grupo" data-nome="discente">
+					<label>
+						<p>Nome</p>
+						<input data-nome="discente-nome" type="text">
+					</label>
+					<label>
+						<p>Período em que se encontra no curso</p>
+						<input data-nome="discente-periodo" type="text">
+					</label>
+					<button class="removerParticipante">-</button>
+				</li>
+			</ul>
+			<button class="btAddParticipante" data-for="lista-discentes">+ adicionar participante</button>
 
 			<h3>Técnicos-administrativos participantes</h3>
-			<div class="grupo participantes col-3">
-				<label>
-					<p>Nome</p>
-					<input id="ta-nome" type="text">
-				</label>
-				<label>
-					<p>Departamento em que atua</p>
-					<input id="ta-departamento" type="text">
-				</label>
-				<label>
-					<p>Tempo de contratação</p>
-					<input id="ta-contratacao" type="text">
-				</label>
-				<p style="text-align:right;width:100%"><button>+ adicionar participante</button></p>
-			</div>
+			<ul class="participantes" data-nome="lista-ta">
+				<li class="grupo" data-nome="ta">
+					<label>
+						<p>Nome</p>
+						<input data-nome="ta-nome" type="text">
+					</label>
+					<label>
+						<p>Departamento em que atua</p>
+						<input data-nome="ta-departamento" type="text">
+					</label>
+					<label>
+						<p>Tempo de contratação</p>
+						<input data-nome="ta-contratacao" type="text">
+					</label>
+					<button class="removerParticipante">-</button>
+				</li>
+			</ul>
+			<button class="btAddParticipante" data-for="lista-ta">+ adicionar participante</button>
 
 			<nav>
-				<a href="#">« voltar</a>
-				<div id="status-participantes">Faltam 7 participantes</div>
-				<a href="#">avançar »</a>
+				<button class="bt-voltar">« voltar</button>
+				<p id="status-participantes" data-minimo-participantes="10"><span class="atual">1 participante</span> (mínimo de <span class="minimo">10</span>)</p>
+				<button class="bt-avancar" disabled>avançar »</button>
 			</nav>
 		</section>
 
@@ -128,9 +137,12 @@
 
 
 		<!-- ---------------------------- EIXO 1 ---------------------------- -->
-		<section>
+		
+
+		<!-- @@@@@@@@@@@@@@@@@@@@ VETOR 1 @@@@@@@@@@@@@@@@@@@@ -->
+		<section class="pergunta" id="e1v01">
 			<h1>Eixo 1: Mundo do Trabalho</h1>
-			<p>Este eixo busca identificar a tendência da escola médica para mostrar e discutir, de forma crítica, aspectos do mundo do trabalho onde o médico deverá inserir-se para prestar serviços de saúde, procurando, de forma comprometida, acompanhar e discutir criticamente a dinâmica do mercado de trabalho em saúde e a organização dos serviços, visando ao atendimento qualificado da saúde da população e à orientação dos futuros médicos. </p>
+			<p class="enunciado-eixo">Este eixo busca identificar a tendência da escola médica para mostrar e discutir, de forma crítica, aspectos do mundo do trabalho onde o médico deverá inserir-se para prestar serviços de saúde, procurando, de forma comprometida, acompanhar e discutir criticamente a dinâmica do mercado de trabalho em saúde e a organização dos serviços, visando ao atendimento qualificado da saúde da população e à orientação dos futuros médicos. </p>
 
 			<h2 class="vetor">VETOR 1 - Carência de profissionais e emprego</h2>
 			
@@ -152,23 +164,24 @@
 			<div class="grupo">
 				<label>
 					<p>Justificativa</p>
-					<textarea name="" id="eixo1-vetor1-justificativa" cols="30" rows="4"></textarea>
+					<textarea name="" id="eixo1-vetor1-justificativa" class="input_justificativa" cols="30" rows="4"></textarea>
 				</label>
 				<label>
 					<p>Evidências</p>
-					<textarea name="" id="eixo1-vetor1-evidencias" cols="30" rows="4"></textarea>
+					<textarea name="" id="eixo1-vetor1-evidencias" class="input_evidencias" cols="30" rows="4"></textarea>
 				</label>
 			</div>
 
 			<nav>
-				<a href="#">« voltar</a>
-				<a href="#">avançar »</a>
+				<button class="bt-voltar">« voltar</button>
+				<button class="bt-avancar" disabled>avançar »</button>
 			</nav>
 		</section>
 
+		
 
-
-		<section>
+		<!-- @@@@@@@@@@@@@@@@@@@@ VETOR 2 @@@@@@@@@@@@@@@@@@@@ -->
+		<section class="pergunta" id="e1v02">
 			<h1>Eixo 1</h1>
 
 			<h2 class="vetor">VETOR 2 - Base econômica da prática profissional</h2>
@@ -191,23 +204,26 @@
 			<div class="grupo">
 				<label>
 					<p>Justificativa</p>
-					<textarea name="" id="eixo1-vetor2-justificativa" cols="30" rows="4"></textarea>
+					<textarea name="" id="eixo1-vetor2-justificativa" class="input_justificativa" cols="30" rows="4"></textarea>
 				</label>
 				<label>
 					<p>Evidências</p>
-					<textarea name="" id="eixo1-vetor2-evidencias" cols="30" rows="4"></textarea>
+					<textarea name="" id="eixo1-vetor2-evidencias" class="input_evidencias" cols="30" rows="4"></textarea>
 				</label>
 			</div>
 
 			<nav>
-				<a href="#">« voltar</a>
-				<a href="#">avançar »</a>
+				<button class="bt-voltar">« voltar</button>
+				<button class="bt-avancar" disabled>avançar »</button>
 			</nav>
 		</section>
 
 
 
-		<section>
+		
+
+		<!-- @@@@@@@@@@@@@@@@@@@@ VETOR 3 @@@@@@@@@@@@@@@@@@@@ -->
+		<section class="pergunta" id="e1v03">
 			<h1>Eixo 1</h1>
 
 			<h2 class="vetor">VETOR 3 - Prestação de serviços</h2>
@@ -230,17 +246,17 @@
 			<div class="grupo">
 				<label>
 					<p>Justificativa</p>
-					<textarea name="" id="eixo1-vetor3-justificativa" cols="30" rows="4"></textarea>
+					<textarea name="" id="eixo1-vetor3-justificativa" class="input_justificativa" cols="30" rows="4"></textarea>
 				</label>
 				<label>
 					<p>Evidências</p>
-					<textarea name="" id="eixo1-vetor3-evidencias" cols="30" rows="4"></textarea>
+					<textarea name="" id="eixo1-vetor3-evidencias" class="input_evidencias" cols="30" rows="4"></textarea>
 				</label>
 			</div>
 
 			<nav>
-				<a href="#">« voltar</a>
-				<a href="#">avançar »</a>
+				<button class="bt-voltar">« voltar</button>
+				<button class="bt-avancar" disabled>avançar »</button>
 			</nav>
 		</section>
 
@@ -249,9 +265,12 @@
 
 
 		<!-- ---------------------------- EIXO 2 ---------------------------- -->
-		<section>
+		
+
+		<!-- @@@@@@@@@@@@@@@@@@@@ VETOR 4 @@@@@@@@@@@@@@@@@@@@ -->
+		<section class="pergunta" id="e2v04">
 			<h1>EIXO 2: Projeto Pedagógico</h1>
-			<p>Neste eixo analisamos como a escola se vê e situa na sociedade e estabelece sua missão política e pedagógica, busca identificar como desempenha seu papel nas inter-relações sociais, como concebe saúde e doença e seus fatores determinantes e consegue dar um enfoque intersetorial.</p>
+			<p class="enunciado-eixo">Neste eixo analisamos como a escola se vê e situa na sociedade e estabelece sua missão política e pedagógica, busca identificar como desempenha seu papel nas inter-relações sociais, como concebe saúde e doença e seus fatores determinantes e consegue dar um enfoque intersetorial.</p>
 
 			<h2 class="vetor">VETOR 4 – Biomédico e epidemiológico-social</h2>
 			
@@ -273,28 +292,31 @@
 			<div class="grupo">
 				<label>
 					<p>Justificativa</p>
-					<textarea name="" id="eixo2-vetor4-justificativa" cols="30" rows="4"></textarea>
+					<textarea name="" id="eixo2-vetor4-justificativa" class="input_justificativa" cols="30" rows="4"></textarea>
 				</label>
 				<label>
 					<p>Evidências</p>
-					<textarea name="" id="eixo2-vetor4-evidencias" cols="30" rows="4"></textarea>
+					<textarea name="" id="eixo2-vetor4-evidencias" class="input_evidencias" cols="30" rows="4"></textarea>
 				</label>
 			</div>
 
 			<nav>
-				<a href="#">« voltar</a>
-				<a href="#">avançar »</a>
+				<button class="bt-voltar">« voltar</button>
+				<button class="bt-avancar" disabled>avançar »</button>
 			</nav>
 		</section>
 
 
 
 
-		<section>
+		
+
+		<!-- @@@@@@@@@@@@@@@@@@@@ VETOR 5 @@@@@@@@@@@@@@@@@@@@ -->
+		<section class="pergunta" id="e2v05">
 			<h1>Eixo 2</h1>
 			<h2 class="vetor">VETOR 5 - Aplicação tecnológica</h2>
 			
-			<fieldset class="grupo" id="eixo1-vetor1">
+			<fieldset class="grupo" id="eixo2-vetor5">
 				<label>
 					<input value="opcao1" name="eixo2-vetor5" type="radio">
 					<p>Dá grande ênfase à aplicação da alta tecnologia na atenção clínica e Cirúrgica.</p>
@@ -312,24 +334,27 @@
 			<div class="grupo">
 				<label>
 					<p>Justificativa</p>
-					<textarea name="" id="eixo2-vetor5-justificativa" cols="30" rows="4"></textarea>
+					<textarea name="" id="eixo2-vetor5-justificativa" class="input_justificativa" cols="30" rows="4"></textarea>
 				</label>
 				<label>
 					<p>Evidências</p>
-					<textarea name="" id="eixo2-vetor5-evidencias" cols="30" rows="4"></textarea>
+					<textarea name="" id="eixo2-vetor5-evidencias" class="input_evidencias" cols="30" rows="4"></textarea>
 				</label>
 			</div>
 
 			<nav>
-				<a href="#">« voltar</a>
-				<a href="#">avançar »</a>
+				<button class="bt-voltar">« voltar</button>
+				<button class="bt-avancar" disabled>avançar »</button>
 			</nav>
 		</section>
 
 
 
 
-		<section>
+		
+
+		<!-- @@@@@@@@@@@@@@@@@@@@ VETOR 6 @@@@@@@@@@@@@@@@@@@@ -->
+		<section class="pergunta" id="e2v06">
 			<h1>Eixo 2</h1>
 			<h2 class="vetor">VETOR 6 – Produção de conhecimentos</h2>
 			
@@ -351,17 +376,17 @@
 			<div class="grupo">
 				<label>
 					<p>Justificativa</p>
-					<textarea name="" id="eixo2-vetor6-justificativa" cols="30" rows="4"></textarea>
+					<textarea name="" id="eixo2-vetor6-justificativa" class="input_justificativa" cols="30" rows="4"></textarea>
 				</label>
 				<label>
 					<p>Evidências</p>
-					<textarea name="" id="eixo2-vetor6-evidencias" cols="30" rows="4"></textarea>
+					<textarea name="" id="eixo2-vetor6-evidencias" class="input_evidencias" cols="30" rows="4"></textarea>
 				</label>
 			</div>
 
 			<nav>
-				<a href="#">« voltar</a>
-				<a href="#">avançar »</a>
+				<button class="bt-voltar">« voltar</button>
+				<button class="bt-avancar" disabled>avançar »</button>
 			</nav>
 		</section>
 
@@ -371,11 +396,14 @@
 
 
 
-		<section>
+		
+
+		<!-- @@@@@@@@@@@@@@@@@@@@ VETOR 7 @@@@@@@@@@@@@@@@@@@@ -->
+		<section class="pergunta" id="e2v07">
 			<h1>Eixo 2</h1>
 			<h2 class="vetor">VETOR 7 - Pós-graduação e educação permanente</h2>
 			
-			<fieldset class="grupo" id="eixo1-vetor1">
+			<fieldset class="grupo" id="eixo2-vetor7">
 				<label>
 					<input value="opcao1" name="eixo2-vetor7" type="radio">
 					<p>Oferece residências, especializações, mestrado e doutorado em campos especializados com total autonomia e não desenvolve educação permanente.</p>
@@ -393,17 +421,17 @@
 			<div class="grupo">
 				<label>
 					<p>Justificativa</p>
-					<textarea name="" id="eixo2-vetor7-justificativa" cols="30" rows="4"></textarea>
+					<textarea name="" id="eixo2-vetor7-justificativa" class="input_justificativa" cols="30" rows="4"></textarea>
 				</label>
 				<label>
 					<p>Evidências</p>
-					<textarea name="" id="eixo2-vetor7-evidencias" cols="30" rows="4"></textarea>
+					<textarea name="" id="eixo2-vetor7-evidencias" class="input_evidencias" cols="30" rows="4"></textarea>
 				</label>
 			</div>
 
 			<nav>
-				<a href="#">« voltar</a>
-				<a href="#">avançar »</a>
+				<button class="bt-voltar">« voltar</button>
+				<button class="bt-avancar" disabled>avançar »</button>
 			</nav>
 		</section>	
 
@@ -414,9 +442,12 @@
 
 
 		<!-- ---------------------------- EIXO 3 ---------------------------- -->
-		<section>
+		
+
+		<!-- @@@@@@@@@@@@@@@@@@@@ VETOR 8 @@@@@@@@@@@@@@@@@@@@ -->
+		<section class="pergunta" id="e3v08">
 			<h1>Eixo 3: Abordagem pedagógica</h1>
-			<p>Este eixo conceitual que abrange métodos de construção e acompanhamento do processo ensino-pedagógico busca identificar a tendência do processo ensino-aprendizagem e do processo avaliativo que se desenvolve na escola e a orientação didático-pedagógica, verificando se é mais centrada no professor ou no aluno, com o uso ou não de tutorias.</p>
+			<p class="enunciado-eixo">Este eixo conceitual que abrange métodos de construção e acompanhamento do processo ensino-pedagógico busca identificar a tendência do processo ensino-aprendizagem e do processo avaliativo que se desenvolve na escola e a orientação didático-pedagógica, verificando se é mais centrada no professor ou no aluno, com o uso ou não de tutorias.</p>
 
 			<h2 class="vetor">VETOR 8 – Estrutura curricular</h2>
 			
@@ -438,17 +469,17 @@
 			<div class="grupo">
 				<label>
 					<p>Justificativa</p>
-					<textarea name="" id="eixo3-vetor8-justificativa" cols="30" rows="4"></textarea>
+					<textarea name="" id="eixo3-vetor8-justificativa" class="input_justificativa" cols="30" rows="4"></textarea>
 				</label>
 				<label>
 					<p>Evidências</p>
-					<textarea name="" id="eixo3-vetor8-evidencias" cols="30" rows="4"></textarea>
+					<textarea name="" id="eixo3-vetor8-evidencias" class="input_evidencias" cols="30" rows="4"></textarea>
 				</label>
 			</div>
 
 			<nav>
-				<a href="#">« voltar</a>
-				<a href="#">avançar »</a>
+				<button class="bt-voltar">« voltar</button>
+				<button class="bt-avancar" disabled>avançar »</button>
 			</nav>
 		</section>
 
@@ -457,7 +488,10 @@
 
 
 
-		<section>
+		
+
+		<!-- @@@@@@@@@@@@@@@@@@@@ VETOR 9 @@@@@@@@@@@@@@@@@@@@ -->
+		<section class="pergunta" id="e3v09">
 			<h1>Eixo 3</h1>
 
 			<h2 class="vetor">Vetor 9 – Orientação didática</h2>
@@ -480,17 +514,17 @@
 			<div class="grupo">
 				<label>
 					<p>Justificativa</p>
-					<textarea name="" id="eixo3-vetor9-justificativa" cols="30" rows="4"></textarea>
+					<textarea name="" id="eixo3-vetor9-justificativa" class="input_justificativa" cols="30" rows="4"></textarea>
 				</label>
 				<label>
 					<p>Evidências</p>
-					<textarea name="" id="eixo3-vetor9-evidencias" cols="30" rows="4"></textarea>
+					<textarea name="" id="eixo3-vetor9-evidencias" class="input_evidencias" cols="30" rows="4"></textarea>
 				</label>
 			</div>
 
 			<nav>
-				<a href="#">« voltar</a>
-				<a href="#">avançar »</a>
+				<button class="bt-voltar">« voltar</button>
+				<button class="bt-avancar" disabled>avançar »</button>
 			</nav>
 		</section>
 
@@ -498,7 +532,10 @@
 
 
 
-		<section>
+		
+
+		<!-- @@@@@@@@@@@@@@@@@@@@ VETOR 10 @@@@@@@@@@@@@@@@@@@@ -->
+		<section class="pergunta" id="e3v10">
 			<h1>Eixo 3</h1>
 			<h2 class="vetor">VETOR 10 - Apoio e tutoria</h2>
 			
@@ -520,17 +557,17 @@
 			<div class="grupo">
 				<label>
 					<p>Justificativa</p>
-					<textarea name="" id="eixo3-vetor10-justificativa" cols="30" rows="4"></textarea>
+					<textarea name="" id="eixo3-vetor10-justificativa" class="input_justificativa" cols="30" rows="4"></textarea>
 				</label>
 				<label>
 					<p>Evidências</p>
-					<textarea name="" id="eixo3-vetor10-evidencias" cols="30" rows="4"></textarea>
+					<textarea name="" id="eixo3-vetor10-evidencias" class="input_evidencias" cols="30" rows="4"></textarea>
 				</label>
 			</div>
 
 			<nav>
-				<a href="#">« voltar</a>
-				<a href="#">avançar »</a>
+				<button class="bt-voltar">« voltar</button>
+				<button class="bt-avancar" disabled>avançar »</button>
 			</nav>
 		</section>
 
@@ -540,9 +577,12 @@
 
 
 		<!-- ---------------------------- EIXO 4 ---------------------------- -->
-		<section>
+		
+
+		<!-- @@@@@@@@@@@@@@@@@@@@ VETOR 11 @@@@@@@@@@@@@@@@@@@@ -->
+		<section class="pergunta" id="e4v11">
 			<h1>Eixo 4: Cenários de Prática</h1>
-			<p>Neste eixo pretende-se identificar a tendência para o ensino da prática médica. Se esta é centrada no hospital ou na rede do sistema, postos, ambulatórios, domicílios, famílias e/ou comunidades, identificando a diversificação de cenários (locais) e as oportunidades que a Escola Médica proporciona aos alunos para o aprendizado da prática médica.</p>
+			<p class="enunciado-eixo">Neste eixo pretende-se identificar a tendência para o ensino da prática médica. Se esta é centrada no hospital ou na rede do sistema, postos, ambulatórios, domicílios, famílias e/ou comunidades, identificando a diversificação de cenários (locais) e as oportunidades que a Escola Médica proporciona aos alunos para o aprendizado da prática médica.</p>
 
 			<h2 class="vetor">VETOR 11 – Local de prática</h2>
 			
@@ -564,24 +604,27 @@
 			<div class="grupo">
 				<label>
 					<p>Justificativa</p>
-					<textarea name="" id="eixo4-vetor11-justificativa" cols="30" rows="4"></textarea>
+					<textarea name="" id="eixo4-vetor11-justificativa" class="input_justificativa" cols="30" rows="4"></textarea>
 				</label>
 				<label>
 					<p>Evidências</p>
-					<textarea name="" id="eixo4-vetor11-evidencias" cols="30" rows="4"></textarea>
+					<textarea name="" id="eixo4-vetor11-evidencias" class="input_evidencias" cols="30" rows="4"></textarea>
 				</label>
 			</div>
 
 			<nav>
-				<a href="#">« voltar</a>
-				<a href="#">avançar »</a>
+				<button class="bt-voltar">« voltar</button>
+				<button class="bt-avancar" disabled>avançar »</button>
 			</nav>
 		</section>
 
 
 
 
-		<section>
+		
+
+		<!-- @@@@@@@@@@@@@@@@@@@@ VETOR 12 @@@@@@@@@@@@@@@@@@@@ -->
+		<section class="pergunta" id="e4v12">
 			<h1>Eixo 4</h1>
 
 			<h2 class="vetor">VETOR 12 - Participação discente</h2>
@@ -604,17 +647,17 @@
 			<div class="grupo">
 				<label>
 					<p>Justificativa</p>
-					<textarea name="" id="eixo4-vetor12-justificativa" cols="30" rows="4"></textarea>
+					<textarea name="" id="eixo4-vetor12-justificativa" class="input_justificativa" cols="30" rows="4"></textarea>
 				</label>
 				<label>
 					<p>Evidências</p>
-					<textarea name="" id="eixo4-vetor12-evidencias" cols="30" rows="4"></textarea>
+					<textarea name="" id="eixo4-vetor12-evidencias" class="input_evidencias" cols="30" rows="4"></textarea>
 				</label>
 			</div>
 
 			<nav>
-				<a href="#">« voltar</a>
-				<a href="#">avançar »</a>
+				<button class="bt-voltar">« voltar</button>
+				<button class="bt-avancar" disabled>avançar »</button>
 			</nav>
 		</section>
 
@@ -622,7 +665,10 @@
 
 
 
-		<section>
+		
+
+		<!-- @@@@@@@@@@@@@@@@@@@@ VETOR 13 @@@@@@@@@@@@@@@@@@@@ -->
+		<section class="pergunta" id="e4v13">
 			<h1>Eixo 4</h1>
 			<h2 class="vetor">VETOR 13 - Âmbito escolar</h2>
 			
@@ -644,26 +690,29 @@
 			<div class="grupo">
 				<label>
 					<p>Justificativa</p>
-					<textarea name="" id="eixo4-vetor13-justificativa" cols="30" rows="4"></textarea>
+					<textarea name="" id="eixo4-vetor13-justificativa" class="input_justificativa" cols="30" rows="4"></textarea>
 				</label>
 				<label>
 					<p>Evidências</p>
-					<textarea name="" id="eixo4-vetor13-evidencias" cols="30" rows="4"></textarea>
+					<textarea name="" id="eixo4-vetor13-evidencias" class="input_evidencias" cols="30" rows="4"></textarea>
 				</label>
 			</div>
 
 			<nav>
-				<a href="#">« voltar</a>
-				<a href="#">avançar »</a>
+				<button class="bt-voltar">« voltar</button>
+				<button class="bt-avancar" disabled>avançar »</button>
 			</nav>
 		</section>
 
 
 
 		<!-- ---------------------------- EIXO 5 ---------------------------- -->
-		<section>
+		
+
+		<!-- @@@@@@@@@@@@@@@@@@@@ VETOR 14 @@@@@@@@@@@@@@@@@@@@ -->
+		<section class="pergunta" id="e5v14">
 			<h1>Eixo 5: Desenvolvimento Docente</h1>
-			<p>Este eixo, que aponta para a necessidade do processo formador ser permanente no cotidiano da atividade docente, agente formador e modelo em serviço, busca identificar a tendência para investir nos aspectos didático-pedagógicos, técnico-científicos, de inter-relação visando a parceria com os serviços, e no aspecto da gestão da escola. Deve caracterizar as políticas da escola médica em relação ao corpo docente, que é o agente que orienta a formação médica e define o perfil de assessoramento dos técnico-administrativos para desenvolvimento de suas tarefas.</p>
+			<p class="enunciado-eixo">Este eixo, que aponta para a necessidade do processo formador ser permanente no cotidiano da atividade docente, agente formador e modelo em serviço, busca identificar a tendência para investir nos aspectos didático-pedagógicos, técnico-científicos, de inter-relação visando a parceria com os serviços, e no aspecto da gestão da escola. Deve caracterizar as políticas da escola médica em relação ao corpo docente, que é o agente que orienta a formação médica e define o perfil de assessoramento dos técnico-administrativos para desenvolvimento de suas tarefas.</p>
 
 			<h2 class="vetor">VETOR 14 – Formação didático-pedagógica</h2>
 			
@@ -685,24 +734,27 @@
 			<div class="grupo">
 				<label>
 					<p>Justificativa</p>
-					<textarea name="" id="eixo5-vetor14-justificativa" cols="30" rows="4"></textarea>
+					<textarea name="" id="eixo5-vetor14-justificativa" class="input_justificativa" cols="30" rows="4"></textarea>
 				</label>
 				<label>
 					<p>Evidências</p>
-					<textarea name="" id="eixo5-vetor14-evidencias" cols="30" rows="4"></textarea>
+					<textarea name="" id="eixo5-vetor14-evidencias" class="input_evidencias" cols="30" rows="4"></textarea>
 				</label>
 			</div>
 
 			<nav>
-				<a href="#">« voltar</a>
-				<a href="#">avançar »</a>
+				<button class="bt-voltar">« voltar</button>
+				<button class="bt-avancar" disabled>avançar »</button>
 			</nav>
 		</section>
 
 
 
 
-		<section>
+		
+
+		<!-- @@@@@@@@@@@@@@@@@@@@ VETOR 15 @@@@@@@@@@@@@@@@@@@@ -->
+		<section class="pergunta" id="e5v15">
 			<h1>Eixo 5</h1>
 			<h2 class="vetor">VETOR 15 – Atualização técnico-científica</h2>
 			
@@ -724,17 +776,17 @@
 			<div class="grupo">
 				<label>
 					<p>Justificativa</p>
-					<textarea name="" id="eixo5-vetor15-justificativa" cols="30" rows="4"></textarea>
+					<textarea name="" id="eixo5-vetor15-justificativa" class="input_justificativa" cols="30" rows="4"></textarea>
 				</label>
 				<label>
 					<p>Evidências</p>
-					<textarea name="" id="eixo5-vetor15-evidencias" cols="30" rows="4"></textarea>
+					<textarea name="" id="eixo5-vetor15-evidencias" class="input_evidencias" cols="30" rows="4"></textarea>
 				</label>
 			</div>
 
 			<nav>
-				<a href="#">« voltar</a>
-				<a href="#">avançar »</a>
+				<button class="bt-voltar">« voltar</button>
+				<button class="bt-avancar" disabled>avançar »</button>
 			</nav>
 		</section>
 
@@ -742,21 +794,24 @@
 
 
 
-		<section>
+		
+
+		<!-- @@@@@@@@@@@@@@@@@@@@ VETOR 16 @@@@@@@@@@@@@@@@@@@@ -->
+		<section class="pergunta" id="e5v16">
 			<h1>Eixo 5</h1>
 			<h2 class="vetor">VETOR 16 – Participação nos serviços de assistência</h2>
 			
-			<fieldset class="grupo" id="eixo1-vetor1">
+			<fieldset class="grupo" id="eixo5-vetor16">
 				<label>
-					<input value="opcao1" name="eixo1-vetor1" type="radio">
+					<input value="opcao1" name="eixo5-vetor16" type="radio">
 					<p>Não estimula o corpo docente que por sua vez não participa dos serviços e do planejamento do sistema de saúde (municipal, regional) na sua área de influência, e os profissionais da área de saúde não participam na docência.</p>
 				</label>
 				<label>
-					<input value="opcao2" name="eixo1-vetor1" type="radio">
+					<input value="opcao2" name="eixo5-vetor16" type="radio">
 					<p>Procura estimular os docentes a participarem dos serviços de saúde e do planejamento do sistema de saúde, o que fazem esporadicamente e os profissionais de saúde dos serviços eventualmente participam na docência.</p>
 				</label>
 				<label>
-					<input value="opcao3" name="eixo1-vetor1" type="radio">
+					<input value="opcao3" name="eixo5-vetor16" type="radio">
 					<p>Estimula os docentes e apoia sua participação no planejamento e avaliação do sistema de saúde em sua área de influência e tem serviços assistenciais integrados com o sistema de saúde e os profissionais do serviço têm participação na docência.</p>
 				</label>
 			</fieldset>
@@ -764,17 +819,17 @@
 			<div class="grupo">
 				<label>
 					<p>Justificativa</p>
-					<textarea name="" id="eixo1-vetor1-justificativa" cols="30" rows="4"></textarea>
+					<textarea name="" id="eixo5-vetor16-justificativa" class="input_justificativa" cols="30" rows="4"></textarea>
 				</label>
 				<label>
 					<p>Evidências</p>
-					<textarea name="" id="eixo1-vetor1-evidencias" cols="30" rows="4"></textarea>
+					<textarea name="" id="eixo5-vetor16-evidencias" class="input_evidencias" cols="30" rows="4"></textarea>
 				</label>
 			</div>
 
 			<nav>
-				<a href="#">« voltar</a>
-				<a href="#">avançar »</a>
+				<button class="bt-voltar">« voltar</button>
+				<button class="bt-avancar" disabled>avançar »</button>
 			</nav>
 		</section>
 
@@ -782,22 +837,25 @@
 
 
 
-		<section>
+		
+
+		<!-- @@@@@@@@@@@@@@@@@@@@ VETOR 17 @@@@@@@@@@@@@@@@@@@@ -->
+		<section class="pergunta" id="e5v17">
 			<h1>Eixo 5</h1>
 
 			<h2 class="vetor">VETOR 17 – Capacidade gerencial</h2>
 			
-			<fieldset class="grupo" id="eixo1-vetor1">
+			<fieldset class="grupo" id="eixo5-vetor17">
 				<label>
-					<input value="opcao1" name="eixo1-vetor1" type="radio">
+					<input value="opcao1" name="eixo5-vetor17" type="radio">
 					<p>Não promove capacitação gerencial dos docentes que assumem cargos administrativos institucionais de forma empírica e fundada em experiência própria (disciplina, departamento, direção de escola, de hospital-escola, de clínica, etc.).</p>
 				</label>
 				<label>
-					<input value="opcao2" name="eixo1-vetor1" type="radio">
+					<input value="opcao2" name="eixo5-vetor17" type="radio">
 					<p>Não promove, mas reconhece a importância da capacitação gerencial, tendo docentes que assumem cargos administrativos institucionais com algum conhecimento de ciências administrativa e buscam imprimir estilo gerencial participativo entre os segmentos docente, discente e técnico-administrativo.</p>
 				</label>
 				<label>
-					<input value="opcao3" name="eixo1-vetor1" type="radio">
+					<input value="opcao3" name="eixo5-vetor17" type="radio">
 					<p>Promove capacitação gerencial e possui docentes que assumem cargos administrativos institucionais com bom conhecimento de ciências administrativas, liderando programas, buscando assessorar-se de acordo com as necessidades identificadas e proporcionando participação ativa e responsabilização dos segmentos docente, discente e técnico-administrativo nas decisões, processos, resultados e avaliações institucionais.</p>
 				</label>
 			</fieldset>
@@ -805,17 +863,17 @@
 			<div class="grupo">
 				<label>
 					<p>Justificativa</p>
-					<textarea name="" id="eixo1-vetor1-justificativa" cols="30" rows="4"></textarea>
+					<textarea name="" id="eixo5-vetor17-justificativa" class="input_justificativa" cols="30" rows="4"></textarea>
 				</label>
 				<label>
 					<p>Evidências</p>
-					<textarea name="" id="eixo1-vetor1-evidencias" cols="30" rows="4"></textarea>
+					<textarea name="" id="eixo5-vetor17-evidencias" class="input_evidencias" cols="30" rows="4"></textarea>
 				</label>
 			</div>
 
 			<nav>
-				<a href="#">« voltar</a>
-				<a href="#">obter resultados da avaliação »</a>
+				<button class="bt-voltar">« voltar</button>
+				<button disabled id="bt-resultado">obter resultados da avaliação »</button>
 			</nav>
 		</section>
 
@@ -824,7 +882,575 @@
 
 	</form>
 
-	<progress value="2" max="100">
+
+	<section id="resultado">
+		
+		<div class="conteudo">
+			<h1 class="titulo-resultado">Resultado da Avaliação</h1>
+
+			<svg id="resultado-roda" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 1030 653.94">
+			    
+			    <circle class="contorno"  cx="515.9" cy="333.6" r="200"/>
+
+			    <g class="eixos">
+
+			        
+
+			        <!-- @@@@@@@@@@@@@@@@@@@@ EIXO 1 @@@@@@@@@@@@@@@@@@@@ -->
+			        <g class="eixo" id="eixo1">
+			            
+			            <!-- ==================== VETOR 1 ==================== -->            
+			            <g class="vetor" id="vetor1">
+			                <path class="fatia fora"  d="M489.69 193.51L479.12 137a198.72 198.72 0 00-68.52 26.56l30.28 48.89a141.55 141.55 0 0148.81-18.94z"/>
+			                <path class="fatia meio"  d="M473.78 265.59A79.37 79.37 0 01501.19 255l-11.5-61.46a141.55 141.55 0 00-48.81 18.93z"/>
+			                <path class="fatia centro"  d="M501.19 255a79.37 79.37 0 00-27.41 10.62l42.12 68z"/>
+			                <text  transform="matrix(.93 -.36 .36 .93 493.59 290.53)" class="nfatia ncentro">
+			                1
+			                </text>
+			                <text  transform="matrix(.93 -.36 .36 .93 472.96 237.27)" class="nfatia nmeio">
+			                2
+			                </text>
+			                <text  transform="matrix(.93 -.36 .36 .93 451.78 182.56)" class="nfatia nfora">
+			                3
+			                </text>
+			                <text class="nome-vetor" text-anchor="end" transform="translate(450.12 113.09)">
+			                    carência e<tspan x="0" y="1em">emprego</tspan>
+			                </text>
+			            </g>
+
+			            
+			            <!-- ==================== VETOR 2 ==================== -->            
+			            <g class="vetor" id="vetor2">
+			                <path class="fatia fora"  d="M542.05 193.51L552.61 137a198.66 198.66 0 00-73.49 0l10.57 56.52a141.37 141.37 0 0152.36-.01z"/>
+			                <path class="fatia meio"  d="M501.19 255a79.35 79.35 0 0129.39 0l11.47-61.46a141.37 141.37 0 00-52.36 0z"/>
+			                <path class="fatia centro"  d="M530.58 255a79.35 79.35 0 00-29.39 0l14.71 78.6z"/>
+			                <text  transform="translate(510.63 285.43)" class="nfatia ncentro">
+			                1
+			                </text>
+			                <text  transform="translate(510.63 228.31)" class="nfatia nmeio">
+			                2
+			                </text>
+			                <text  transform="translate(510.63 169.65)" class="nfatia nfora">
+			                3
+			                </text>
+			                <text class="nome-vetor" text-anchor="middle" transform="translate(515.33 100.06)">
+			                    base<tspan x="0" y="1em">econômica</tspan>
+			                </text>
+			            </g>
+
+			            
+			            <!-- ==================== VETOR 3 ==================== -->            
+			            <g class="vetor" id="vetor3">
+			                <path class="fatia fora"  d="M590.88 212.41l30.26-48.91A199 199 0 00552.6 137l-10.55 56.53a141.42 141.42 0 0148.83 18.88z"/>
+			                <path class="fatia meio"  d="M530.58 255A79.48 79.48 0 01558 265.58l32.9-53.17a141.42 141.42 0 00-48.83-18.9z"/>
+			                <path class="fatia centro"  d="M558 265.58A79.48 79.48 0 00530.58 255l-14.68 78.6z"/>
+			                <text  transform="matrix(.93 .36 -.36 .93 528.33 286.78)" class="nfatia ncentro">
+			                1
+			                </text>
+			                <text  transform="matrix(.93 .36 -.36 .93 548.95 233.52)" class="nfatia nmeio">
+			                2
+			                </text>
+			                <text  transform="matrix(.93 .36 -.36 .93 570.14 178.82)" class="nfatia nfora">
+			                3
+			                </text>
+			                <text class="nome-vetor" text-anchor="start" transform="translate(570.48 114.09)">
+			                    prestação<tspan x="0" y="1em">de serviço</tspan>
+			                </text>
+			            </g>
+
+
+			            <text class="nome-eixo" transform="translate(443.31 27.05)">
+			                mundo do trabalho
+			            </text>
+			           <text text-anchor="middle" class="pontuacao" transform="translate(512.69 48.81)">
+			               <tspan class="pontos"></tspan> de
+			               <tspan class="total">9</tspan> •
+			               <tspan class="porcentagem">55%</tspan>
+			           </text>
+			        </g>
+
+			        
+
+			        <!-- @@@@@@@@@@@@@@@@@@@@ EIXO 2 @@@@@@@@@@@@@@@@@@@@ -->
+			        <g class="eixo" id="eixo2">
+			            
+			            <!-- ==================== VETOR 4 ==================== -->            
+			            <g class="vetor" id="vetor4">
+			                <path class="fatia fora"  d="M629.59 247.66L675.46 213a198.72 198.72 0 00-54.33-49.48l-30.25 48.9a141.8 141.8 0 0138.71 35.24z"/>
+			                <path class="fatia meio"  d="M558 265.57a79.62 79.62 0 0121.72 19.8l49.88-37.71a141.8 141.8 0 00-38.71-35.25z"/>
+			                <path class="fatia centro"  d="M579.71 285.37a79.62 79.62 0 00-21.71-19.8l-42.09 68z"/>
+			                <text  transform="rotate(42.34 -107.944 850.1286)" class="nfatia ncentro">
+			                1
+			                </text>
+			                <text  transform="rotate(42.34 -34.1995 878.6865)" class="nfatia nmeio">
+			                2
+			                </text>
+			                <text  transform="rotate(42.34 41.5368 908.0171)" class="nfatia nfora">
+			                3
+			                </text>
+			                <text class="nome-vetor" text-anchor="start" transform="translate(654.06 157.06)">
+			                    biomédico<tspan x="0" y="1em">epidomológico-social</tspan>
+			                </text>
+			            </g>
+
+			            
+			            <!-- ==================== VETOR 5 ==================== -->            
+			            <g class="vetor" id="vetor5">
+			                <path class="fatia fora"  d="M653 294.52l55.3-15.77A198.9 198.9 0 00675.46 213l-45.88 34.68A141.54 141.54 0 01653 294.52z"/>
+			                <path class="fatia meio"  d="M579.71 285.36a79.43 79.43 0 0113.11 26.31L653 294.52a141.54 141.54 0 00-23.37-46.85z"/>
+			                <path class="fatia centro"  d="M592.82 311.67a79.43 79.43 0 00-13.11-26.31L515.9 333.6z"/>
+			                <text  transform="rotate(63.51 30.0312 603.3816)" class="nfatia ncentro">
+			                1
+			                </text>
+			                <text  transform="rotate(63.51 76.1748 631.938)" class="nfatia nmeio">
+			                2
+			                </text>
+			                <text  transform="rotate(63.51 123.5578 661.2693)" class="nfatia nfora">
+			                3
+			                </text>
+			                <text class="nome-vetor" text-anchor="start" transform="translate(710.2 231.09)">
+			                    aplicação<tspan x="0" y="1em">tecnológica</tspan>
+			                </text>
+			            </g>
+
+			            
+			            <!-- ==================== VETOR 6 ==================== -->            
+			            <g class="vetor" id="vetor6">
+			                <path class="fatia fora"  d="M657.81 346.65l57.27 5.27a198.6 198.6 0 00-6.84-73.16l-55.3 15.76a141.26 141.26 0 014.87 52.13z"/>
+			                <path class="fatia meio"  d="M592.83 311.67a79.59 79.59 0 012.72 29.26l62.26 5.72a141.26 141.26 0 00-4.87-52.13z"/>
+			                <path class="fatia centro"  d="M595.55 340.93a79.59 79.59 0 00-2.72-29.26L515.9 333.6z"/>
+			                <text  transform="rotate(84.68 103.9847 471.0959)" class="nfatia ncentro">
+			                1
+			                </text>
+			                <text  transform="rotate(84.68 135.3224 499.6568)" class="nfatia nmeio">
+			                2
+			                </text>
+			                <text  transform="rotate(84.68 167.5125 528.9876)" class="nfatia nfora">
+			                3
+			                </text>
+			                <text class="nome-vetor" text-anchor="start" transform="translate(730.89 307.13)">
+			                    produção de<tspan x="0" y="1em">conhecimento</tspan>
+			                </text>
+			            </g>
+
+			            
+			            <!-- ==================== VETOR 7 ==================== -->            
+			            <g class="vetor" id="vetor7">
+			                <path class="fatia fora"  d="M643.52 397L695 422.62a198.65 198.65 0 0020.05-70.7l-57.26-5.27A141.61 141.61 0 01643.52 397z"/>
+			                <path class="fatia meio"  d="M595.56 340.93a79.49 79.49 0 01-8 28.27l56 27.83a141.61 141.61 0 0014.29-50.38z"/>
+			                <path class="fatia centro"  d="M587.53 369.2a79.49 79.49 0 008-28.27l-79.63-7.33z"/>
+			                <text  transform="rotate(105.85 152.743 383.8019)" class="nfatia ncentro">
+			                1
+			                </text>
+			                <text  transform="rotate(105.85 174.3243 412.3622)" class="nfatia nmeio">
+			                2
+			                </text>
+			                <text  transform="rotate(105.85 196.487 441.6917)" class="nfatia nfora">
+			                3
+			                </text>
+			                <text class="nome-vetor" text-anchor="start" transform="translate(726.09 388.01)">
+			                    pós-graduação e<tspan x="0" y="1em">educação permanente</tspan>
+			                </text>
+			            </g>
+
+
+			            <text class="nome-eixo" transform="translate(821.02 237.27)">
+			                projeto pedagógico
+			            </text>
+			           <text text-anchor="middle" class="pontuacao" transform="translate(893.32 258.43)">
+			                <tspan class="pontos">5</tspan> de
+			                <tspan class="total">12</tspan> •
+			                <tspan class="porcentagem">55%</tspan>
+			            </text>
+			        </g>
+
+			        
+
+			        <!-- @@@@@@@@@@@@@@@@@@@@ EIXO 3 @@@@@@@@@@@@@@@@@@@@ -->
+			        <g class="eixo" id="eixo3">
+			            
+			            <!-- ==================== VETOR 8 ==================== -->            
+			            <g class="vetor" id="vetor8">
+			                <path class="fatia fora"  d="M612 438.84l38.78 42.46A198.66 198.66 0 00695 422.61L643.52 397A141.58 141.58 0 01612 438.84z"/>
+			                <path class="fatia meio"  d="M587.53 369.2a79.32 79.32 0 01-17.69 23.47L612 438.84A141.58 141.58 0 00643.52 397z"/>
+			                <path class="fatia centro"  d="M569.84 392.67a79.32 79.32 0 0017.69-23.47l-71.63-35.6z"/>
+			                <text  transform="rotate(127.02 189.4358 318.1589)" class="nfatia ncentro">
+			                1
+			                </text>
+			                <text  transform="rotate(127.02 203.6714 346.719)" class="nfatia nmeio">
+			                2
+			                </text>
+			                <text  transform="rotate(127.02 218.2853 376.0482)" class="nfatia nfora">
+			                3
+			                </text>
+			                <text class="nome-vetor" text-anchor="start" transform="translate(690.02 467.8)">
+			                    estrutura<tspan x="0" y="1em">curricular</tspan>
+			                </text>
+			            </g>
+
+			            
+			            <!-- ==================== VETOR 9 ==================== -->            
+			            <g class="vetor" id="vetor9">
+			                <path class="fatia fora"  d="M567.51 466.44L588.34 520a198.52 198.52 0 0062.44-38.75L612 438.83a141.6 141.6 0 01-44.49 27.61z"/>
+			                <path class="fatia meio"  d="M569.84 392.67a79.32 79.32 0 01-25 15.49l22.64 58.28A141.6 141.6 0 00612 438.83z"/>
+			                <path class="fatia centro"  d="M544.87 408.16a79.32 79.32 0 0025-15.49L515.9 333.6z"/>
+			                <text  transform="rotate(148.19 219.9374 263.6284)" class="nfatia ncentro">
+			                1
+			                </text>
+			                <text  transform="rotate(148.19 228.0766 292.1883)" class="nfatia nmeio">
+			                2
+			                </text>
+			                <text  transform="rotate(148.19 236.4342 321.5187)" class="nfatia nfora">
+			                3
+			                </text>
+			                <text class="nome-vetor" text-anchor="start" transform="translate(616.33 533.62)">
+			                    orientação<tspan x="0" y="1em">didática</tspan>
+			                </text>
+			            </g>
+
+			            
+			            <!-- ==================== VETOR 10 ==================== -->            
+			            <g class="vetor" id="vetor10">
+			                <path class="fatia fora"  d="M516.06 476.12l.06 57.5A198.7 198.7 0 00588.34 520l-20.83-53.59a141.63 141.63 0 01-51.45 9.71z"/>
+			                <path class="fatia meio"  d="M544.87 408.17a79.62 79.62 0 01-28.87 5.42l.07 62.53a141.63 141.63 0 0051.45-9.68z"/>
+			                <path class="fatia centro"  d="M516 413.59a79.62 79.62 0 0028.88-5.42l-29-74.57z"/>
+			                <text  transform="matrix(-.98 .18 -.18 -.98 529.92 379.96)" class="nfatia ncentro">
+			                1
+			                </text>
+			                <text  transform="matrix(-.98 .18 -.18 -.98 540.47 436.1)" class="nfatia nmeio">
+			                2
+			                </text>
+			                <text  transform="matrix(-.98 .18 -.18 -.98 551.3 493.75)" class="nfatia nfora">
+			                3
+			                </text>
+			                <text class="nome-vetor" text-anchor="start" transform="translate(535.91 555.06)">
+			                    apoio e<tspan x="0" y="1em">tutoria</tspan>
+			                </text>
+			            </g>
+
+
+			            <text class="nome-eixo" transform="translate(596.44 609.77)">
+			                abordagem pedagógica
+			            </text>
+			            <text text-anchor="middle" class="pontuacao" transform="translate(686 631.6)">
+			                <tspan class="pontos">5</tspan> de
+			                <tspan class="total">9</tspan> •
+			                <tspan class="porcentagem">55%</tspan>
+			            </text>
+			        </g>
+
+			        
+
+			        <!-- @@@@@@@@@@@@@@@@@@@@ EIXO 4 @@@@@@@@@@@@@@@@@@@@ -->
+			        <g class="eixo" id="eixo4">
+			            
+			            <!-- ==================== VETOR 11 ==================== -->            
+			            <g class="vetor" id="vetor11">
+			                <path class="fatia fora"  d="M464.58 466.56l-20.71 53.65a198.7 198.7 0 0072.25 13.4l-.06-57.5a141.61 141.61 0 01-51.48-9.55z"/>
+			                <path class="fatia meio"  d="M516 413.6a79.61 79.61 0 01-28.9-5.37l-22.51 58.33a141.61 141.61 0 0051.48 9.55z"/>
+			                <path class="fatia centro"  d="M487.09 408.23A79.61 79.61 0 00516 413.6l-.09-80z"/>
+			                <text  transform="matrix(-.98 -.18 .18 -.98 512.26 381.92)" class="nfatia ncentro">
+			                1
+			                </text>
+			                <text  transform="matrix(-.98 -.18 .18 -.98 501.83 438.08)" class="nfatia nmeio">
+			                2
+			                </text>
+			                <text  transform="matrix(-.98 -.18 .18 -.98 491.1 495.75)" class="nfatia nfora">
+			                3
+			                </text>
+			                <text class="nome-vetor" text-anchor="end" transform="translate(485.92 556.06)">
+			                    local de<tspan x="0" y="1em">prática</tspan>
+			                </text>
+			            </g>
+
+			            
+			            <!-- ==================== VETOR 12 ==================== -->            
+			            <g class="vetor" id="vetor12">
+			                <path class="fatia fora"  d="M420 439.05l-38.66 42.55a198.84 198.84 0 0062.54 38.6l20.7-53.65a141.38 141.38 0 01-44.58-27.5z"/>
+			                <path class="fatia meio"  d="M487.09 408.23a79.52 79.52 0 01-25-15.44L420 439.05a141.38 141.38 0 0044.55 27.5z"/>
+			                <path class="fatia centro"  d="M462.09 392.79a79.52 79.52 0 0025 15.44l28.81-74.63z"/>
+			                <text  transform="rotate(-148.3 301.1004 118.4077)" class="nfatia ncentro">
+			                1
+			                </text>
+			                <text  transform="rotate(-148.3 292.9945 146.9678)" class="nfatia nmeio">
+			                2
+			                </text>
+			                <text  transform="rotate(-148.3 284.6646 176.2994)" class="nfatia nfora">
+			                3
+			                </text>
+			                <text class="nome-vetor" text-anchor="end" transform="translate(401.71 526)">
+			                    participação<tspan x="0" y="1em">discente</tspan>
+			                </text>
+			            </g>
+
+			            
+			            <!-- ==================== VETOR 13 ==================== -->            
+			            <g class="vetor" id="vetor13">
+			                <path class="fatia fora"  d="M388.41 397.31L337 423a199 199 0 0044.38 58.58L420 439.05a141.76 141.76 0 01-31.59-41.74z"/>
+			                <path class="fatia meio"  d="M462.08 392.79a79.56 79.56 0 01-17.74-23.43l-55.93 27.95A141.76 141.76 0 00420 439.05z"/>
+			                <path class="fatia centro"  d="M444.34 369.36a79.56 79.56 0 0017.74 23.43l53.82-59.19z"/>
+			                <text  transform="rotate(-127.13 331.5102 63.9286)" class="nfatia ncentro">
+			                1
+			                </text>
+			                <text  transform="rotate(-127.13 317.3113 92.489)" class="nfatia nmeio">
+			                2
+			                </text>
+			                <text  transform="rotate(-127.13 302.7287 121.8203)" class="nfatia nfora">
+			                3
+			                </text>
+			                <text class="nome-vetor" text-anchor="end" transform="translate(344.29 466.44)">
+			                    âmbito<tspan x="0" y="1em">escolar</tspan>
+			                </text>
+			            </g>
+
+
+			            <text class="nome-eixo" transform="translate(262.73 609.77)">
+			                cenário da prática
+			            </text>
+			            <text text-anchor="middle" class="pontuacao" transform="translate(329.77 631.6)">
+			                <tspan class="pontos">5</tspan> de
+			                <tspan class="total">9</tspan> •
+			                <tspan class="porcentagem">55%</tspan>
+			            </text>
+			        </g>
+
+			        
+
+			        <!-- @@@@@@@@@@@@@@@@@@@@ EIXO 5 @@@@@@@@@@@@@@@@@@@@ -->
+			        <g class="eixo" id="eixo5">
+			            
+			            <!-- ==================== VETOR 14 ==================== -->            
+			            <g class="vetor" id="vetor14">
+			                <path class="fatia fora"  d="M374 347l-57.25 5.39A198.67 198.67 0 00337 423l51.44-25.71A141.55 141.55 0 01374 347z"/>
+			                <path class="fatia meio"  d="M444.34 369.36a79.38 79.38 0 01-8.08-28.25L374 347a141.55 141.55 0 0014.41 50.33z"/>
+			                <path class="fatia centro"  d="M436.26 341.11a79.38 79.38 0 008.08 28.25l71.56-35.76z"/>
+			                <text  transform="matrix(-.27 -.96 .96 -.27 470.97 351.91)" class="nfatia ncentro">
+			                1
+			                </text>
+			                <text  transform="matrix(-.27 -.96 .96 -.27 416.05 367.62)" class="nfatia nmeio">
+			                2
+			                </text>
+			                <text  transform="matrix(-.27 -.96 .96 -.27 359.65 383.75)" class="nfatia nfora">
+			                3
+			                </text>
+			                <text class="nome-vetor" text-anchor="end" transform="translate(299.31 388.01)">
+			                    formação<tspan x="0" y="1em">didático-pedagócica</tspan>
+			                </text>
+			            </g>
+
+			            
+			            <!-- ==================== VETOR 15 ==================== -->            
+			            <g class="vetor" id="vetor15">
+			                <path class="fatia fora"  d="M378.75 294.83l-55.33-15.64a198.41 198.41 0 00-6.65 73.18L374 347a141.76 141.76 0 014.75-52.17z"/>
+			                <path class="fatia meio"  d="M436.25 341.11a79.49 79.49 0 012.67-29.27l-60.17-17A141.76 141.76 0 00374 347z"/>
+			                <path class="fatia centro"  d="M438.92 311.84a79.49 79.49 0 00-2.67 29.27l79.65-7.51z"/>
+			                <text  transform="matrix(.09 -1 1 .09 467.49 334.49)" class="nfatia ncentro">
+			                1
+			                </text>
+			                <text  transform="matrix(.09 -1 1 .09 410.6 329.3)" class="nfatia nmeio">
+			                2
+			                </text>
+			                <text  transform="matrix(.09 -1 1 .09 352.19 323.98)" class="nfatia nfora">
+			                3
+			                </text>
+			                <text class="nome-vetor" text-anchor="end" transform="translate(295 307.13)">
+			                    atualização<tspan x="0" y="1em">técnico científica</tspan>
+			                </text>
+			            </g>
+
+			            
+			            <!-- ==================== VETOR 16 ==================== -->            
+			            <g class="vetor" id="vetor16">
+			                <path class="fatia fora"  d="M402 247.92l-45.95-34.57a198.63 198.63 0 00-32.63 65.84l55.33 15.64A141.77 141.77 0 01402 247.92z"/>
+			                <path class="fatia meio"  d="M438.92 311.84A79.46 79.46 0 01452 285.51l-50-37.59a141.77 141.77 0 00-23.25 46.91z"/>
+			                <path class="fatia centro"  d="M452 285.51a79.46 79.46 0 00-13.06 26.33l77 21.76z"/>
+			                <text  transform="rotate(-63.62 490.635 -220.764)" class="nfatia ncentro">
+			                1
+			                </text>
+			                <text  transform="rotate(-63.62 444.586 -192.1977)" class="nfatia nmeio">
+			                2
+			                </text>
+			                <text  transform="rotate(-63.62 397.309 -162.875)" class="nfatia nfora">
+			                3
+			                </text>
+			                <text class="nome-vetor" text-anchor="end" transform="translate(315 229.09)">
+			                    participação<tspan x="0" y="1em">na assistência</tspan>
+			                </text>
+			            </g>
+
+			            
+			            <!-- ==================== VETOR 17 ==================== -->            
+			            <g class="vetor" id="vetor17">
+			                <path class="fatia fora"  d="M440.64 212.58l-30.37-48.84a199 199 0 00-54.21 49.61l46 34.58a141.5 141.5 0 0138.58-35.35z"/>
+			                <path class="fatia meio"  d="M452 285.51a79.42 79.42 0 0121.69-19.84l-33-53.09A141.5 141.5 0 00402 247.93z"/>
+			                <path class="fatia centro"  d="M473.66 265.67A79.42 79.42 0 00452 285.51l63.9 48.09z"/>
+			                <text  transform="rotate(-42.45 628.0709 -466.5727)" class="nfatia ncentro">
+			                1
+			                </text>
+			                <text  transform="rotate(-42.45 554.5444 -438.013)" class="nfatia nmeio">
+			                2
+			                </text>
+			                <text  transform="rotate(-42.45 479.0174 -408.6895)" class="nfatia nfora">
+			                3
+			                </text>
+			                <text class="nome-vetor" text-anchor="end" transform="translate(365.31 158.06)">
+			                    capacitação<tspan x="0" y="1em">gerencial</tspan>
+			                </text>
+			            </g>
+
+
+			            <text class="nome-eixo" transform="translate(7.92 237.27)">
+			                desenvolvimento docente
+			            </text>
+			            <text text-anchor="middle" class="pontuacao" transform="translate(104.6 259.47)">
+			                <tspan class="pontos">5</tspan> de
+			                <tspan class="total">12</tspan> •
+			                <tspan class="porcentagem">55%</tspan>
+			            </text>
+			        </g>
+			    </g>
+			    <g class="divisoesvetores">
+			        <path  d="M515.9 333.6L673.83 78.54M515.9 333.6l268.55 133.72M515.9 333.6v300M515.9 333.6L247.35 467.32M515.9 333.6L357.97 78.54"/>
+			    </g>
+			    
+			    <g class="total">
+			        <path class="fundo" d="M478.03 320.09h75.92v26.88h-75.92z"/>
+			        <text text-anchor="middle" class="numero" transform="translate(515 339.7)">
+			        1%
+			        </text>
+			    </g>
+			</svg>
+
+			<div class="box-salvar no-print">
+				<button id="salvar">Salvar Resultado</button>
+				<button class="no-print" id="revisar">« Ou revise suas respostas</button>
+				
+				<section class="explicacao-salvar">
+					<p>Essa avaliação usa o <strong>sistema de impressão</strong> do navegador para salvar o resultado em PDF. </p>
+					<p>Ao clicar no botão, assim que a janela de impressão aparecer, haverá um campo para você escolher em qual impressora aquela página será impressa. Ao invés de escolher uma impressora, procure pela opção <strong>Salvar em PDF</strong>, ou qualquer outra opção similar.</p>
+					<p>Após salvar em PDF, envie o arquivo com o resultado para o e-mail da CAES/ABEM: <a href="secretaria@abem-educmed.org.br">secretaria@abem-educmed.org.br</a></p>
+				</section>
+			</div>
+
+			<ul class="print instituicao">
+				<li>
+					<h3>Nome da instituição</h3>
+					<p data-for="nome-instituicao"></p>
+				</li>
+
+				<li>
+					<h3>Cidade</h3>
+					<p data-for="cidade"></p>
+				</li>
+
+				<li>
+					<h3>Estado</h3>
+					<p data-for="estado"></p>
+				</li>
+
+				<li>
+					<h3>Ano de formatura da primeira turma</h3>
+					<p data-for="primeira-turma"></p>
+				</li>
+			</ul>
+
+			<p class="print" id="timestamp">Relatório gerado em <span class="tempo"></span></p>
+
+
+
+
+
+			<div class="print participantes">
+
+				<h1>Participantes</h1>
+
+				<h2>Docente participantes</h2>
+
+				<table data-for="lista-docentes">
+					<thead>
+						<tr>
+							<th>Nome</th>
+							<th>Departamento em que atua</th>
+							<th>Tempo de contratação</th>
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr class="template">
+							<td data-for="docente-nome"></td>
+							<td data-for="docente-departamento"></td>
+							<td data-for="docente-contratacao"></td>
+						</tr>
+					</tbody>
+				</table>
+				
+				<h2>Discente participantes</h2>
+
+
+				<table data-for="lista-discentes">
+					<thead>
+						<tr>
+							<th>Nome</th>
+							<th>Período em que se encontra no curso</th>
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr class="template">
+							<td data-for="discente-nome"></td>
+							<td data-for="discente-periodo"></td>
+						</tr>
+					</tbody>
+				</table>
+
+				
+
+				<h2>Técnicos-administrativos participantes</h2>
+
+				<table data-for="lista-ta">
+					<thead>
+						<tr>
+							<th>Nome</th>
+							<th>Departamento em que atua</th>
+							<th>Tempo de contratação</th>
+						</tr>
+					</thead>
+
+					<tbody>
+						<tr class="template">
+							<td data-for="ta-nome"></td>
+							<td data-for="ta-departamento"></td>
+							<td data-for="ta-contratacao"></td>
+						</tr>
+					</tbody>
+				</table>
+
+				
+			</div>
+
+
+			<div class="print perguntas">
+				<div class="template pergunta">
+					<h1 class="eixo"></h1>
+					<p class="enunciado"></p>
+					<h2 class="vetor"></h2>
+					<ul class="opcoes">
+					</ul>
+					<h3>Justificativa</h3>
+					<p class="justificativa"></p>
+					<h3>Evidências</h3>
+					<p class="evidencias"></p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<div id="progresso-preenchimento">
+		<div class="progresso" style="width: 5.26%"></div>
+		<progress value="1" min="1" max="19"/>
+	</div>
+
+	
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

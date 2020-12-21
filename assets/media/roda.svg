@@ -1,0 +1,354 @@
+<svg id="resultado-roda" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1021.54 653.94">
+    <circle class="contorno" cx="534.67" cy="333.6" r="200"/>
+    <g class="eixos">
+        <g class="eixo" id="eixo1">
+            <g class="vetor" id="vetor1">
+                <path class="fatia fora" d="M508.46 193.51L497.89 137a198.72 198.72 0 00-68.52 26.56l30.27 48.89a141.6 141.6 0 0148.82-18.94z"/>
+                <path class="fatia meio" d="M492.55 265.59A79.37 79.37 0 01520 255l-11.5-61.46a141.6 141.6 0 00-48.82 18.93z"/>
+                <path class="fatia centro" d="M520 255a79.37 79.37 0 00-27.41 10.62l42.12 68z"/>
+                <text transform="matrix(.93 -.36 .36 .93 512.36 290.53)" class="nfatia ncentro">
+                1
+                </text>
+                <text transform="rotate(-21.2 883.4 -1200.9)" class="nfatia nmeio">
+                2
+                </text>
+                <text transform="matrix(.93 -.36 .36 .93 470.55 182.56)" class="nfatia nfora">
+                3
+                </text>
+                <text class="nome-vetor" text-anchor="end" x="0" y="0" transform="translate(468.89 113.09)">
+                carência e<tspan x="0" y="1em">emprego</tspan>
+                </text>
+            </g>
+            <g class="vetor" id="vetor2">
+                <path class="fatia fora" d="M560.82 193.51L571.38 137a198.66 198.66 0 00-73.49 0l10.57 56.52a141.37 141.37 0 0152.36-.01z"/>
+                <path class="fatia meio" d="M520 255a79.35 79.35 0 0129.39 0l11.47-61.46a141.37 141.37 0 00-52.36 0z"/>
+                <path class="fatia centro" d="M549.35 255a79.35 79.35 0 00-29.35 0l14.71 78.63z"/>
+                <text transform="translate(529.4 285.43)" class="nfatia ncentro">
+                1
+                </text>
+                <text transform="translate(529.4 228.31)" class="nfatia nmeio">
+                2
+                </text>
+                <text transform="translate(529.4 169.65)" class="nfatia nfora">
+                3
+                </text>
+                <text class="nome-vetor" text-anchor="middle" transform="translate(536 100.06)">
+                base<tspan x="0" y="1em">econômica</tspan>
+                </text>
+            </g>
+            <g class="vetor" id="vetor3">
+                <path class="fatia fora" d="M609.65 212.41l30.26-48.91a199 199 0 00-68.54-26.5l-10.55 56.53a141.42 141.42 0 0148.83 18.88z"/>
+                <path class="fatia meio" d="M549.35 255a79.48 79.48 0 0127.4 10.62l32.9-53.17a141.42 141.42 0 00-48.83-18.9z"/>
+                <path class="fatia centro" d="M576.75 265.58a79.48 79.48 0 00-27.4-10.58l-14.68 78.6z"/>
+                <text transform="matrix(.93 .36 -.36 .93 547.1 286.78)" class="nfatia ncentro">
+                1
+                </text>
+                <text transform="matrix(.93 .36 -.36 .93 567.72 233.52)" class="nfatia nmeio">
+                2
+                </text>
+                <text transform="rotate(21.2 -184.7 1670.36)" class="nfatia nfora">
+                3
+                </text>
+                <text class="nome-vetor" text-anchor="start" transform="translate(589.25 114.09)">
+                prestação<tspan x="0" y="1em">de serviço</tspan>
+                </text>
+            </g>
+            <text class="nome-eixo" transform="translate(462.08 27.05)">
+            mundo do trabalho
+            </text>
+            <text text-anchor="middle" class="pontuacao" transform="translate(534.46 48.81)">
+            <tspan class="pontos"></tspan> de
+            <tspan class="total">9</tspan> •
+            <tspan class="porcentagem">55%</tspan>
+            </text>
+        </g>
+        <g class="eixo" id="eixo2">
+            <g class="vetor" id="vetor4">
+                <path class="fatia fora" d="M648.36 247.66L694.23 213a198.72 198.72 0 00-54.33-49.48l-30.25 48.9a141.8 141.8 0 0138.71 35.24z"/>
+                <path class="fatia meio" d="M576.76 265.57a79.62 79.62 0 0121.72 19.8l49.88-37.71a141.8 141.8 0 00-38.71-35.25z"/>
+                <path class="fatia centro" d="M598.48 285.37a79.62 79.62 0 00-21.72-19.8l-42.09 68z"/>
+                <text transform="rotate(42.34 -98.56 874.36)" class="nfatia ncentro">
+                1
+                </text>
+                <text transform="rotate(42.34 -24.81 902.92)" class="nfatia nmeio">
+                2
+                </text>
+                <text transform="rotate(42.34 50.92 932.25)" class="nfatia nfora">
+                3
+                </text>
+                <text class="nome-vetor" text-anchor="start" transform="translate(672.83 157.06)">
+                biomédico<tspan x="0" y="1em">epidomológico-social</tspan>
+                </text>
+            </g>
+            <g class="vetor" id="vetor5">
+                <path class="fatia fora" d="M671.72 294.52L727 278.75A198.9 198.9 0 00694.23 213l-45.88 34.68a141.54 141.54 0 0123.37 46.84z"/>
+                <path class="fatia meio" d="M598.48 285.36a79.43 79.43 0 0113.11 26.31l60.13-17.15a141.54 141.54 0 00-23.37-46.85z"/>
+                <path class="fatia centro" d="M611.59 311.67a79.43 79.43 0 00-13.11-26.31l-63.81 48.24z"/>
+                <text transform="rotate(63.51 39.41 618.54)" class="nfatia ncentro">
+                1
+                </text>
+                <text transform="rotate(63.51 85.56 647.1)" class="nfatia nmeio">
+                2
+                </text>
+                <text transform="rotate(63.51 132.94 676.43)" class="nfatia nfora">
+                3
+                </text>
+                <text class="nome-vetor" text-anchor="start" transform="translate(728.97 231.09)">
+                aplicação<tspan x="0" y="1em">tecnológica</tspan>
+                </text>
+            </g>
+            <g class="vetor" id="vetor6">
+                <path class="fatia fora" d="M676.58 346.65l57.27 5.27a198.6 198.6 0 00-6.85-73.16l-55.3 15.76a141.47 141.47 0 014.88 52.13z"/>
+                <path class="fatia meio" d="M611.6 311.67a79.59 79.59 0 012.72 29.26l62.26 5.72a141.47 141.47 0 00-4.87-52.13z"/>
+                <path class="fatia centro" d="M614.32 340.93a79.59 79.59 0 00-2.72-29.26l-76.93 21.93z"/>
+                <text transform="rotate(84.68 113.37 481.4)" class="nfatia ncentro">
+                1
+                </text>
+                <text transform="rotate(84.68 144.7 509.96)" class="nfatia nmeio">
+                2
+                </text>
+                <text transform="rotate(84.68 176.9 539.29)" class="nfatia nfora">
+                3
+                </text>
+                <text class="nome-vetor" text-anchor="start" transform="translate(749.66 307.13)">
+                produção de<tspan x="0" y="1em">conhecimento</tspan>
+                </text>
+            </g>
+            <g class="vetor" id="vetor7">
+                <path class="fatia fora" d="M662.29 397l51.5 25.59a198.85 198.85 0 0020.05-70.7l-57.26-5.27A141.61 141.61 0 01662.29 397z"/>
+                <path class="fatia meio" d="M614.33 340.93a79.49 79.49 0 01-8 28.27l56 27.83a141.61 141.61 0 0014.29-50.38z"/>
+                <path class="fatia centro" d="M606.3 369.2a79.49 79.49 0 008-28.27l-79.66-7.33z"/>
+                <text transform="rotate(105.85 162.13 390.9)" class="nfatia ncentro">
+                1
+                </text>
+                <text transform="rotate(105.85 183.7 419.45)" class="nfatia nmeio">
+                2
+                </text>
+                <text transform="rotate(105.85 205.87 448.78)" class="nfatia nfora">
+                3
+                </text>
+                <text class="nome-vetor" text-anchor="start" transform="translate(744.86 388.01)">
+                pós-graduação e<tspan x="0" y="1em">educação permanente</tspan>
+                </text>
+            </g>
+            <text class="nome-eixo" transform="translate(839.79 237.27)">
+            projeto pedagógico
+            </text>
+            <text text-anchor="middle" class="pontuacao" transform="translate(915.09 258.43)">
+            <tspan class="pontos">5</tspan> de
+            <tspan class="total">12</tspan> •
+            <tspan class="porcentagem">55%</tspan>
+            </text>
+        </g>
+        <g class="eixo" id="eixo3">
+            <g class="vetor" id="vetor8">
+                <path class="fatia fora" d="M630.77 438.84l38.78 42.46a198.66 198.66 0 0044.23-58.69L662.29 397a141.58 141.58 0 01-31.52 41.84z"/>
+                <path class="fatia meio" d="M606.3 369.2a79.32 79.32 0 01-17.69 23.47l42.16 46.17A141.58 141.58 0 00662.29 397z"/>
+                <path class="fatia centro" d="M588.61 392.67a79.32 79.32 0 0017.69-23.47l-71.63-35.6z"/>
+                <text transform="rotate(127.02 198.82 322.84)" class="nfatia ncentro">
+                1
+                </text>
+                <text transform="rotate(127.02 213.06 351.4)" class="nfatia nmeio">
+                2
+                </text>
+                <text transform="rotate(127.02 227.67 380.73)" class="nfatia nfora">
+                3
+                </text>
+                <text class="nome-vetor" text-anchor="start" transform="translate(708.79 467.8)">
+                estrutura<tspan x="0" y="1em">curricular</tspan>
+                </text>
+            </g>
+            <g class="vetor" id="vetor9">
+                <path class="fatia fora" d="M586.28 466.44L607.11 520a198.52 198.52 0 0062.44-38.75l-38.78-42.46a141.6 141.6 0 01-44.49 27.65z"/>
+                <path class="fatia meio" d="M588.61 392.67a79.32 79.32 0 01-25 15.49l22.64 58.28a141.6 141.6 0 0044.49-27.61z"/>
+                <path class="fatia centro" d="M563.64 408.16a79.32 79.32 0 0025-15.49l-53.97-59.07z"/>
+                <text transform="rotate(148.19 229.32 266.3)" class="nfatia ncentro">
+                1
+                </text>
+                <text transform="rotate(148.19 237.46 294.86)" class="nfatia nmeio">
+                2
+                </text>
+                <text transform="rotate(148.19 245.82 324.2)" class="nfatia nfora">
+                3
+                </text>
+                <text class="nome-vetor" text-anchor="start" transform="translate(635.1 533.62)">
+                orientação<tspan x="0" y="1em">didática</tspan>
+                </text>
+            </g>
+            <g class="vetor" id="vetor10">
+                <path class="fatia fora" d="M534.83 476.12l.06 57.5A198.7 198.7 0 00607.11 520l-20.83-53.59a141.63 141.63 0 01-51.45 9.71z"/>
+                <path class="fatia meio" d="M563.64 408.17a79.62 79.62 0 01-28.88 5.42l.07 62.53a141.63 141.63 0 0051.45-9.68z"/>
+                <path class="fatia centro" d="M534.76 413.59a79.62 79.62 0 0028.88-5.42l-29-74.57z"/>
+                <text transform="matrix(-.98 .18 -.18 -.98 548.69 379.96)" class="nfatia ncentro">
+                1
+                </text>
+                <text transform="matrix(-.98 .18 -.18 -.98 559.24 436.1)" class="nfatia nmeio">
+                2
+                </text>
+                <text transform="matrix(-.98 .18 -.18 -.98 570.07 493.75)" class="nfatia nfora">
+                3
+                </text>
+                <text class="nome-vetor" text-anchor="start" transform="translate(554.68 555.06)">
+                apoio e<tspan x="0" y="1em">tutoria</tspan>
+                </text>
+            </g>
+            <text class="nome-eixo" transform="translate(615.21 609.77)">
+            abordagem pedagógica
+            </text>
+            <text text-anchor="middle" class="pontuacao" transform="translate(707.77 631.6)">
+            <tspan class="pontos">5</tspan> de
+            <tspan class="total">9</tspan> •
+            <tspan class="porcentagem">55%</tspan>
+            </text>
+        </g>
+        <g class="eixo" id="eixo4">
+            <g class="vetor" id="vetor11">
+                <path class="fatia fora" d="M483.35 466.56l-20.71 53.65a198.7 198.7 0 0072.25 13.4l-.06-57.5a141.61 141.61 0 01-51.48-9.55z"/>
+                <path class="fatia meio" d="M534.76 413.6a79.61 79.61 0 01-28.9-5.37l-22.51 58.33a141.61 141.61 0 0051.48 9.55z"/>
+                <path class="fatia centro" d="M505.86 408.23a79.61 79.61 0 0028.9 5.37l-.09-80z"/>
+                <text transform="matrix(-.98 -.18 .18 -.98 531.03 381.92)" class="nfatia ncentro">
+                1
+                </text>
+                <text transform="matrix(-.98 -.18 .18 -.98 520.6 438.08)" class="nfatia nmeio">
+                2
+                </text>
+                <text transform="matrix(-.98 -.18 .18 -.98 509.87 495.75)" class="nfatia nfora">
+                3
+                </text>
+                <text class="nome-vetor" text-anchor="end" transform="translate(504.69 556.06)">
+                local de<tspan x="0" y="1em">prática</tspan>
+                </text>
+            </g>
+            <g class="vetor" id="vetor12">
+                <path class="fatia fora" d="M438.8 439.05l-38.69 42.55a198.91 198.91 0 0062.53 38.6l20.71-53.65a141.38 141.38 0 01-44.55-27.5z"/>
+                <path class="fatia meio" d="M505.86 408.23a79.41 79.41 0 01-25-15.44l-42.06 46.26a141.38 141.38 0 0044.55 27.5z"/>
+                <path class="fatia centro" d="M480.86 392.79a79.41 79.41 0 0025 15.44l28.81-74.63z"/>
+                <text transform="rotate(-148.3 310.49 115.74)" class="nfatia ncentro">
+                1
+                </text>
+                <text transform="rotate(-148.3 302.38 144.3)" class="nfatia nmeio">
+                2
+                </text>
+                <text transform="rotate(-148.3 294.05 173.63)" class="nfatia nfora">
+                3
+                </text>
+                <text class="nome-vetor" text-anchor="end" transform="translate(420.48 526)">
+                participação<tspan x="0" y="1em">discente</tspan>
+                </text>
+            </g>
+            <g class="vetor" id="vetor13">
+                <path class="fatia fora" d="M407.18 397.31L355.74 423a199 199 0 0044.38 58.58l38.68-42.55a141.76 141.76 0 01-31.62-41.72z"/>
+                <path class="fatia meio" d="M480.85 392.79a79.56 79.56 0 01-17.74-23.43l-55.93 27.95a141.76 141.76 0 0031.62 41.74z"/>
+                <path class="fatia centro" d="M463.11 369.36a79.56 79.56 0 0017.74 23.43l53.82-59.19z"/>
+                <text transform="rotate(-127.13 340.9 59.26)" class="nfatia ncentro">
+                1
+                </text>
+                <text transform="rotate(-127.13 326.7 87.82)" class="nfatia nmeio">
+                2
+                </text>
+                <text transform="rotate(-127.13 312.11 117.15)" class="nfatia nfora">
+                3
+                </text>
+                <text class="nome-vetor" text-anchor="end" transform="translate(360.06 466.44)">
+                âmbito<tspan x="0" y="1em">escolar</tspan>
+                </text>
+            </g>
+            <text class="nome-eixo" transform="translate(281.5 609.77)">
+            cenário da prática
+            </text>
+            <text text-anchor="middle" class="pontuacao" transform="translate(351.54 631.6)">
+            <tspan class="pontos">5</tspan> de
+            <tspan class="total">9</tspan> •
+            <tspan class="porcentagem">55%</tspan>
+            </text>
+        </g>
+        <g class="eixo" id="eixo5">
+            <g class="vetor" id="vetor14">
+                <path class="fatia fora" d="M392.78 347l-57.25 5.39A198.67 198.67 0 00355.75 423l51.44-25.71A141.55 141.55 0 01392.78 347z"/>
+                <path class="fatia meio" d="M463.11 369.36a79.38 79.38 0 01-8.11-28.25L392.78 347a141.55 141.55 0 0014.41 50.33z"/>
+                <path class="fatia centro" d="M455 341.11a79.38 79.38 0 008.08 28.25l71.56-35.76z"/>
+                <text transform="scale(-1) rotate(74.3 -12.64 -500.57)" class="nfatia ncentro">
+                1
+                </text>
+                <text transform="scale(-1) rotate(74.3 25.3 -472.1)" class="nfatia nmeio">
+                2
+                </text>
+                <text transform="scale(-1) rotate(74.3 64.25 -442.86)" class="nfatia nfora">
+                3
+                </text>
+                <text class="nome-vetor" text-anchor="end" transform="translate(320.07 388.01)">
+                formação<tspan x="0" y="1em">didático-pedagócica</tspan>
+                </text>
+            </g>
+            <g class="vetor" id="vetor15">
+                <path class="fatia fora" d="M397.52 294.83l-55.33-15.64a198.41 198.41 0 00-6.65 73.18l57.25-5.4a141.76 141.76 0 014.73-52.14z"/>
+                <path class="fatia meio" d="M455 341.11a79.49 79.49 0 012.67-29.27l-60.17-17a141.76 141.76 0 00-4.71 52.16z"/>
+                <path class="fatia centro" d="M457.69 311.84a79.49 79.49 0 00-2.69 29.27l79.65-7.51z"/>
+                <text transform="matrix(.09 -1 1 .09 486.26 334.49)" class="nfatia ncentro">
+                1
+                </text>
+                <text transform="matrix(.09 -1 1 .09 429.37 329.3)" class="nfatia nmeio">
+                2
+                </text>
+                <text transform="matrix(.09 -1 1 .09 370.96 323.98)" class="nfatia nfora">
+                3
+                </text>
+                <text class="nome-vetor" text-anchor="end" transform="translate(310.34 307.13)">
+                atualização<tspan x="0" y="1em">técnico científica</tspan>
+                </text>
+            </g>
+            <g class="vetor" id="vetor16">
+                <path class="fatia fora" d="M420.78 247.92l-45.95-34.57a198.63 198.63 0 00-32.63 65.84l55.33 15.64a141.77 141.77 0 0123.25-46.91z"/>
+                <path class="fatia meio" d="M457.69 311.84a79.46 79.46 0 0113.06-26.33l-50-37.59a141.77 141.77 0 00-23.25 46.91z"/>
+                <path class="fatia centro" d="M470.75 285.51a79.46 79.46 0 00-13.06 26.33l77 21.76z"/>
+                <text transform="rotate(-63.62 500.02 -235.9)" class="nfatia ncentro">
+                1
+                </text>
+                <text transform="rotate(-63.62 453.97 -207.33)" class="nfatia nmeio">
+                2
+                </text>
+                <text transform="rotate(-63.62 406.69 -178)" class="nfatia nfora">
+                3
+                </text>
+                <text class="nome-vetor" text-anchor="end" transform="translate(335.48 229.09)">
+                participação<tspan x="0" y="1em">na assistência</tspan>
+                </text>
+            </g>
+            <g class="vetor" id="vetor17">
+                <path class="fatia fora" d="M459.41 212.58L429 163.74a199 199 0 00-54.21 49.61l46 34.58a141.5 141.5 0 0138.62-35.35z"/>
+                <path class="fatia meio" d="M470.74 285.51a79.42 79.42 0 0121.69-19.84l-33-53.09a141.5 141.5 0 00-38.62 35.35z"/>
+                <path class="fatia centro" d="M492.43 265.67a79.42 79.42 0 00-21.69 19.84l63.93 48.09z"/>
+                <text transform="rotate(-42.45 637.46 -490.74)" class="nfatia ncentro">
+                1
+                </text>
+                <text transform="rotate(-42.45 563.93 -462.18)" class="nfatia nmeio">
+                2
+                </text>
+                <text transform="rotate(-42.45 488.4 -432.85)" class="nfatia nfora">
+                3
+                </text>
+                <text class="nome-vetor" text-anchor="end" transform="translate(390.08 158.06)">
+                capacitação<tspan x="0" y="1em">gerencial</tspan>
+                </text>
+            </g>
+            <text class="nome-eixo" transform="translate(26.69 237.27)">
+            desenvolvimento docente
+            </text>
+            <text text-anchor="middle" class="pontuacao" transform="translate(126.37 259.47)">
+            <tspan class="pontos">5</tspan> de
+            <tspan class="total">12</tspan> •
+            <tspan class="porcentagem">55%</tspan>
+            </text>
+        </g>
+    </g>
+    <g class="divisoesvetores">
+        <path d="M534.67 333.6L692.6 78.54M534.67 333.6l268.55 133.72M534.67 333.6v300M534.67 333.6L266.12 467.32M534.67 333.6L376.74 78.54"/>
+    </g>
+    
+    <g class="total">
+        <path class="fundo" d="M496.8 320.09h75.92v26.88H496.8z"/>
+        <text text-anchor="middle" class="numero" transform="translate(537 339.7)">
+        1%
+        </text>
+    </g>
+</svg>

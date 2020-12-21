@@ -47,6 +47,7 @@ a.botao, button.botao {
 
 
 
+
 /****************************************
  * CONTAINER QUE ENVOLVE MATERIAL *
  ****************************************/
@@ -77,6 +78,8 @@ a.botao, button.botao {
 	a.voltar { @include order(1); }
 
 	margin-bottom: 3em;
+	position: relative;
+	z-index: 2;
 }
 
 
@@ -113,7 +116,11 @@ button.nota {
 	cursor: pointer;
 	@include transition(transform 0.1s ease-in-out, background 0.1s ease-in-out);
 
-	&:before { content: '?'; display: inline-block; }
+	&:before { 
+		content: 'i'; 
+		font-family: serif;
+		display: inline-block; 
+	}
 
 	&:hover, &:focus {
 		background: $azul;

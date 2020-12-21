@@ -49,6 +49,26 @@
     100%{opacity: 1;}
 }
 
+@include keyframes(sobe){
+    0%{
+        @include transform(translate(0, 2rem));
+    }
+
+    100%{
+        @include transform(translate(0, 0em));
+    }
+}
+
+@include keyframes(paraEsquerda){
+    0%{
+        @include transform(translate(2em, 0));
+    }
+
+    100%{
+        @include transform(translate(0, 0));
+    }
+}
+
 @include keyframes(nomesurge){
     0%{
         opacity: 0;
